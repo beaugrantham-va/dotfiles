@@ -1,0 +1,18 @@
+[user]
+  name = Beau Grantham
+  email = beau.grantham@va.gov
+[push]
+  default = simple
+[commit]
+  gpgsign = true
+[log]
+  showSignature = true
+[core]
+  editor = vim
+  autocrlf = false
+  eol = lf
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
