@@ -1,0 +1,54 @@
+! vim: set ft=xdefaults
+
+! Set the font
+URxvt*font: xft:UbuntuMono-R:size=13
+URxvt*boldFont: xft:UbuntuMono-B:size=13
+
+! Terminal window size
+URxvt*geometry: 95x32
+
+! Disable scrollbar
+URxvt.scrollBar: false
+
+! Set urxvt as login shell
+URxvt*loginShell: true
+
+! Set terminal padding
+URxvt.internalBorder: 15
+
+! Fade when focus is lost
+URxvt*fading: 2
+URxvt*fadeColor: white
+
+! Set colors
+URxvt.background: #232323
+URxvt.foreground: #C0C0C0
+
+*.highlightColor: #3A3F4B
+
+! black
+*.color0:        #1E2127
+*.color8:        #5C6370
+! red
+*.color1:        #E06C75
+*.color9:        #E06C75
+! green
+*.color2:        #98C379
+*.color10:       #98C379
+! yellow
+*.color3:        #D19A66
+*.color11:       #D19A66
+! blue
+*.color4:        #61AFEF
+*.color12:       #61AFEF
+! magenta
+*.color5:        #C678DD
+*.color13:       #C678DD
+! cyan
+*.color6:        #56B6C2
+*.color14:       #56B6C2
+! white
+*.color7:        #ABB2BF
+*.color15:       #FFFFFF
+
+URxvt.iconFile: /usr/share/icons/mate/16x16/apps/utilities-terminal.png
