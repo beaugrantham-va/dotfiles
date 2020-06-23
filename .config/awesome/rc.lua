@@ -16,7 +16,6 @@ local scratch              = require("scratch")
 
 local widget_battery       = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 local widget_volume        = require("awesome-wm-widgets.volumearc-widget.volumearc")
-local widget_brightness    = require("awesome-wm-widgets.brightnessarc-widget.brightnessarc")
 local widget_calendar      = require("awesome-wm-widgets.calendar-widget.calendar")
 local widget_github        = require("github-widget.git")
 
@@ -161,9 +160,12 @@ local tasklist_buttons = gears.table.join(
       c:emit_signal(
         "request::activate",
         "tasklist",
-        {raise = true}
+        { raise = true }
       )
     end
+  end),
+  awful.button({        }, 2, function(c)
+    c:kill()
   end),
   awful.button({        }, 3, function()
     awful.menu.client_list({ theme = { width = 250 } })
@@ -249,11 +251,6 @@ awful.screen.connect_for_each_screen(function(s)
     { -- Right widgets
       wibox.widget.systray(),
       widget_github(),
-      widget_brightness({
-        get_brightness_cmd = 'xbacklight -get',
-        inc_brightness_cmd = 'xbacklight -inc 5',
-        dec_brightness_cmd = 'xbacklight -dec 5'
-      }),
       widget_volume(),
       widget_battery({ show_current_level = true }),
       widget_clock,
