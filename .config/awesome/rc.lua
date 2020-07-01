@@ -15,7 +15,6 @@ local hotkeys_popup        = require("awful.hotkeys_popup")
 local scratch              = require("scratch")
 
 local widget_battery       = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
-local widget_volume        = require("awesome-wm-widgets.volumearc-widget.volumearc")
 local widget_calendar      = require("awesome-wm-widgets.calendar-widget.calendar")
 local widget_github        = require("github-widget.git")
 
@@ -251,7 +250,6 @@ awful.screen.connect_for_each_screen(function(s)
     { -- Right widgets
       wibox.widget.systray(),
       widget_github(),
-      widget_volume(),
       widget_battery({ show_current_level = true }),
       widget_clock,
       s.mylayoutbox,
@@ -260,13 +258,6 @@ awful.screen.connect_for_each_screen(function(s)
     }
   }
 end)
--- }}}
-
--- {{{ Mouse bindings
-root.buttons(gears.table.join(
-  awful.button({ }, 4, awful.tag.viewprev),
-  awful.button({ }, 5, awful.tag.viewnext)
-))
 -- }}}
 
 -- {{{ Key bindings
@@ -466,6 +457,9 @@ end
 -- Client (window) mouse buttons
 clientbuttons = gears.table.join(
   awful.button({        }, 1, function (c)
+    c:emit_signal("request::activate", "mouse_click", { raise = true })
+  end),
+  awful.button({        }, 2, function (c)
     c:emit_signal("request::activate", "mouse_click", { raise = true })
   end),
   awful.button({ modkey }, 1, function (c)
