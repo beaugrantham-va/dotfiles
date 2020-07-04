@@ -51,10 +51,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "zenburn/theme.lua")
-beautiful.icon_theme           = 'mate'
-beautiful.useless_gap          = 4
-beautiful.systray_icon_spacing = 5
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/zenburn-based/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal   = "rxvt-unicode"
@@ -190,7 +187,7 @@ local function set_wallpaper(s)
     if type(wallpaper) == "function" then
       wallpaper = wallpaper(s)
     end
-    gears.wallpaper.maximized(wallpaper, s, true)
+    gears.wallpaper.fit(wallpaper, s, beautiful.bg_focus)
   end
 end
 
