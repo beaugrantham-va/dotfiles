@@ -21,7 +21,8 @@ URxvt*fading: 2
 URxvt*fadeColor: white
 
 ! Set colors
-URxvt.background: #232323
+URxvt*depth: 32
+URxvt.background: [92]#232323
 URxvt.foreground: #C0C0C0
 
 *.highlightColor: #3A3F4B
