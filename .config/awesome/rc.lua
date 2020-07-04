@@ -119,15 +119,15 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 
 -- {{{ Wibar
 local shortcut_firefox = awful.widget.launcher({
-  image   = "/usr/share/icons/hicolor/32x32/apps/firefox.png",
+  image   = menubar.utils.lookup_icon("firefox"),
   command = "firefox"
 })
 local shortcut_urxvt = awful.widget.launcher({
-  image   = "/usr/share/icons/mate/16x16/apps/utilities-terminal.png",
+  image   = menubar.utils.lookup_icon("utilities-terminal.png"),
   command = "rxvt-unicode"
 })
 local shortcut_pcmanfm = awful.widget.launcher({
-  image   = "/usr/share/icons/ubuntu-mono-dark/places/24/user-home.svg",
+  image   = menubar.utils.lookup_icon("system-file-manager"),
   command = "pcmanfm"
 })
 
