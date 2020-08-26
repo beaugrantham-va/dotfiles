@@ -365,8 +365,13 @@ globalkeys = gears.table.join(
                 scratch.toggle("urxvt -name scratch-term",
                 { instance = "scratch-term" })
               end,
-            { description = "launch a scratch terminal", group = "awesome" })
+            { description = "launch a scratch terminal", group = "awesome" }),
 
+  -- Screenshot
+  awful.key({ }, "Print", function()
+                awful.util.spawn("gnome-screenshot --interactive")
+              end,
+            { description = "take a screenshot", group = "awesome" })
 )
 
 clientkeys = gears.table.join(
