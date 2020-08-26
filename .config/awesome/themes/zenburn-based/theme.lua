@@ -16,7 +16,7 @@ theme.systray_icon_spacing = 5
 -- }}}
 
 -- {{{ Styles
-theme.font = "sans 8"
+theme.font       = "sans 8"
 
 -- {{{ Colors
 theme.fg_normal  = "#DCDCCC"
@@ -48,18 +48,18 @@ theme.titlebar_bg_normal = "#3F3F3F"
 -- titlebar_[normal|focus]
 -- tooltip_[font|opacity|fg_color|bg_color|border_width|border_color]
 -- Example:
--- theme.taglist_bg_focus = "#CC9393"
+--theme.taglist_bg_focus = "#CC9393"
 -- }}}
 
 -- {{{ Widgets
 -- You can add as many variables as
 -- you wish and access them by using
 -- beautiful.variable in your rc.lua
--- theme.fg_widget        = "#AECF96"
--- theme.fg_center_widget = "#88A175"
--- theme.fg_end_widget    = "#FF5656"
--- theme.bg_widget        = "#494B4F"
--- theme.border_widget    = "#3F3F3F"
+--theme.fg_widget        = "#AECF96"
+--theme.fg_center_widget = "#88A175"
+--theme.fg_end_widget    = "#FF5656"
+--theme.bg_widget        = "#494B4F"
+--theme.border_widget    = "#3F3F3F"
 -- }}}
 
 -- {{{ Mouse finder
@@ -80,11 +80,11 @@ theme.menu_width  = dpi(100)
 theme.taglist_squares_sel   = system_themes_path .. "zenburn/taglist/squarefz.png"
 theme.taglist_squares_unsel = system_themes_path .. "zenburn/taglist/squarez.png"
 theme.taglist_bg_focus = "#3F3F3F"
--- theme.taglist_squares_resize = "false"
+--theme.taglist_squares_resize = "false"
 -- }}}
 
 -- {{{ Misc
-theme.awesome_icon           = system_themes_path .. "zenburn/awesome-icon.png"
+theme.awesome_icon           = local_themes_path .. "zenburn-based/menu.png"
 theme.menu_submenu_icon      = system_themes_path .. "default/submenu.png"
 -- }}}
 
@@ -137,3 +137,5 @@ theme.titlebar_maximized_button_normal_inactive = system_themes_path .. "zenburn
 -- }}}
 
 return theme
+
+-- vim: filetype=lua:expandtab:shiftwidth=4:tabstop=8:softtabstop=4:textwidth=80
